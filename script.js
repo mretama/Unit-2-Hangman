@@ -61,7 +61,7 @@ function initGame() {
 
 function nextRound() {
     if (currentPool.length === 0) {
-        showEndOverlay(true, "¡Increíble! Completaste todas las oraciones de esta categoría.");
+        showEndOverlay(true, "Awesome! You completed all the quest in this category.");
         return;
     }
 
