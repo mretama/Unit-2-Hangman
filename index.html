@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentence Hangman - Unidad 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🎯 Sentence Hangman: Unit 2</h1>
+        <p>Complete the sentences guessing the right word before yor lives run out.</p>
+    </header>
+
+    <!-- Panel de Configuración -->
+    <div class="config-panel" id="config-panel">
+        <div class="config-group">
+            <label for="category-select">Category:</label>
+            <select id="category-select">
+                <option value="activities">Activities & Concepts (9 words)</option>
+                <option value="experiences">Experiences & Food (7 words)</option>
+                <option value="feelings">Feelings & Verbs (16 words)</option>
+            </select>
+        </div>
+        <button class="btn-primary" onclick="initGame()">Iniciar Juego</button>
+    </div>
+
+    <!-- Barra de Estado -->
+    <div class="status-bar">
+        <div class="status-item">Lives: <span id="lives-display">❤️ ❤️ ❤️ ❤️ ❤️ ❤️</span></div>
+        <div class="status-item">Score: <span id="score-display">0</span></div>
+    </div>
+
+    <!-- Contenedor del Juego -->
+    <div class="game-container" id="game-container" style="display: none;">
+        <!-- Pista del contexto (La oración con la línea en blanco) -->
+        <div class="sentence-clue" id="sentence-clue"></div>
+        
+        <!-- Palabra Oculta (Guiones bajos) -->
+        <div class="word-display" id="word-display"></div>
+
+        <!-- Teclado Virtual -->
+        <div class="keyboard" id="keyboard"></div>
+    </div>
+
+    <!-- Pantalla Superpuesta (Overlay) -->
+    <div class="overlay" id="overlay-screen">
+        <div class="overlay-title" id="overlay-title">GAME OVER</div>
+        <div class="overlay-text" id="overlay-text">The correct word was: XXX</div>
+        <button class="btn-primary" onclick="closeOverlay()">Try again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
